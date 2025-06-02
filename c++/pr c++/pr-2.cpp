@@ -55,5 +55,4 @@ int main() {
             default: cout << "Invalid\n";
         }
     } while (ch != 4);
-    return 0;
 }
