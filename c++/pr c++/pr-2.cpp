@@ -86,7 +86,7 @@ public:
 
 int main() 
 {
-    RailwaySystem rs;
+    RailwaySystem rk;
     int choice, number;
 
     while (choice != 4)
@@ -102,15 +102,15 @@ int main()
         switch (choice) 
 		{
             case 1:
-                rs.addTrain();
+                rk.addTrain();
                 break;
             case 2:
-                rs.displayAllTrains();
+                rk.displayAllTrains();
                 break;
             case 3:
                 cout << "Enter Train Number to Search: ";
                 cin >> number;
-                rs.searchTrainByNumber(number);
+                rk.searchTrainByNumber(number);
                 break;
             case 4:
                 cout << " bye!\n";
