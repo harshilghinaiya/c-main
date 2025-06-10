@@ -29,35 +29,35 @@ public:
 
     void deposit() 
     {
-        double d;
+        double S;
         cout<<"\nEnter Amount to Deposit: ";
-        cin>>d;
-        if (d<0) 
+        cin>>S;
+        if (S<0) 
         {
             cout<<"Deposit amount cannot be negative.\n";
             return;
         }
-        balance += d;
+        balance += S;
         cout<<"Deposit successful. New balance is: "<< balance <<"\n\n";
     }
 
     void withdraw() 
     {
-        double w;
+        double T;
         cout<<"\nEnter Amount to Withdraw: ";
-        cin>>w;
-        if (w<0) 
+        cin>>T;
+        if (T<0) 
         {
             cout<<"Withdrawal amount cannot be negative.\n";
             return;
         }
-        if (w>balance) 
+        if (T>balance) 
         {
             cout<<"Insufficient balance. Withdrawal failed.\n\n";
         } 
         else 
         {
-            balance -= w;
+            balance -= T;
             cout<<"Withdrawal successful. New balance is: "<< balance <<"\n\n";
         }
     }
@@ -94,14 +94,14 @@ class checkingaccount : public Bankaccount
 public:
     double overdraftlimit = 0;
 
-    void checkoverdraft(double w) 
+    void checkoverdraft(double T) 
     {
-        cout<<"\nChecking overdraft for amount: "<< w <<"\n";
-        if (w>balance) 
+        cout<<"\nChecking overdraft for amount: "<< T <<"\n";
+        if (T>balance) 
         {
-            cout<<"You have exceeded your overdraft limit by: "<< (w - balance) <<"\n\n";
+            cout<<"You have exceeded your overdraft limit by: "<< (T - balance) <<"\n\n";
         } 
-        else if (w==balance) 
+        else if (T==balance) 
         {
             cout<<"You have reached your overdraft limit.\n\n";
         } 
@@ -130,7 +130,7 @@ int main()
 
     int numac = 0;
     int choice = 0;
-    cout<<"     Welcome to the Bank Account Manager       \n";
+    cout<<"     Welcome to the Bank Account Manager:-       \n";
     while (choice!=7) 
     {
         cout<<"\nMain Menu:- \n";
@@ -316,7 +316,6 @@ Enter Name of Account Holder: a
 Enter initial deposit amount: 12
 Account created successfully with balance: 12
 
-
  Main Menu:-
 1. Add New Account
 2. Check Account Balance
@@ -332,7 +331,6 @@ Enter your Account Number: 2
 Enter Name of Account Holder: b
 Enter initial deposit amount: 12
 Account created successfully with balance: 12
-
 
  Main Menu:-
 1. Add New Account
@@ -350,7 +348,6 @@ Enter Name of Account Holder: c
 Enter initial deposit amount: 12
 Account created successfully with balance: 12
 
-
  Main Menu :-
 1. Add New Account
 2. Check Account Balance
@@ -365,7 +362,6 @@ Enter your account number to check balance: 1
 
 Current Account Balance: 12
 
-
  Main Menu :-
 1. Add New Account
 2. Check Account Balance
@@ -379,8 +375,7 @@ Please enter your choice: 2
 Enter your account number to check balance: 4
 Account number not recognized.
 
-
- Main Menu:-
+ Main MenU:-
 1. Add New Account
 2. Check Account Balance
 3. Withdraw from Account
@@ -394,7 +389,6 @@ Enter your account number to withdraw from: 2
 
 Enter Amount to Withdraw: 1
 Withdrawal successful. New balance is: 11
-
 
  Main Menu :-
 1. Add New Account
@@ -424,7 +418,6 @@ Enter your account number to deposit to: 3
 
 Enter Amount to Deposit: 1
 Deposit successful. New balance is: 13
-
 
  Main Menu :-
 1. Add New Account
